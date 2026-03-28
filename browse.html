@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+<title>
+ Top Rated-UQU BookHub
+</title>
+<link rel="icon" href="pic/icon.png"/>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+   <!-- Main navigation bar -->
+     <nav class="menu">
+      <img id="Logo" src="pic/bookpic.png" alt="Logo" />
+
+      <ul>
+        <li><a class="menu-item" href="browse.html">Explore Books</a></li>
+        <!--<li><a class="menu-item" href="add-review.html">Share a Review</a></li>-->
+        <li><a class="menu-item" href="top-rated.html">Top Picks</a></li>
+        <li><a class="menu-item" href="search.html">Smart Search </a></li>
+        <li><a class="menu-item" href="add-book.html">Add New Book</a></li>
+        <li><a class="menu-item" href="about.html">Who We Are?</a></li>
+        <li><a class="menu-item" href="contact.html">Contact Us</a></li>
+      </ul>
+    
+     </nav>
+     <div id="search-contact">
+    <h2>Specify By Faculties</h2>
+
+    <select id="filter">
+      <option value="">All Faculties</option>
+      <option value="Engineering">Engineering</option>
+      <option value="Science">Science</option>
+      <option value="IT">Information Technology</option>
+    </select>    
+  </div>
+
+  <main id="book-list" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 40px;">
+    <div class="book-card" data-faculty="Engineering">
+      <img src="pic/book3.jpg" alt="Book Cover" class="book-cover" >
+      <h3>Software Engineering</h3>
+      <p><strong>Author:</strong> Ian Sommerville</p>
+      <p><strong>Faculty:</strong> Engineering</p>
+      <p><strong>Rating:</strong> ★★★★★</p>
+      <a href="#" style="color: #804f00;">View Details</a>
+    </div>
+  
+    <div class="book-card" data-faculty="IT" >
+      <img src="pic/book1.jpg" alt="Book Cover" class="book-cover">
+      <h3>System Analysis and Design</h3>
+      <p><strong>Author:</strong> Alan Dennis</p>
+      <p><strong>Faculty:</strong> IT</p>
+      <p><strong>Rating:</strong> ★★★★☆</p>
+      <a href="#" style="color: #804f00;">View Details</a>
+    </div>
+  
+    <div class="book-card" data-faculty="Science" >
+      <img src="pic/book2.jpg" alt="Book Cover" class="book-cover">
+      <h3>Operating System Concepts</h3>
+      <p><strong>Author:</strong> Abraham Silberschatz</p>
+      <p><strong>Faculty:</strong> Science</p>
+      <p><strong>Rating:</strong> ★★★★★</p>
+      <a href="#" style="color: #804f00;">View Details</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Umm Al-Qura University Library Platform</p>
+  </footer>
+
+  <script>
+
+    const filterSelect = document.getElementById('filter');
+    const bookCards = document.querySelectorAll('.book-card');
+
+    filterSelect.addEventListener('change', function () {
+      const selectedFaculty = this.value;
+
+      bookCards.forEach(card => {
+        const faculty = card.getAttribute('data-faculty');
+        if (selectedFaculty === '' || faculty === selectedFaculty) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  
+
+
+  // Add a tooltip to the logo image
+ var logo = document.getElementById("Logo");
+  logo.title = "Home"; 
+
+// Redirect to homepage when logo is clicked
+function goToHomePage() {
+    window.location.href = "index.html";
+  
+}
+
+logo.addEventListener("click", goToHomePage);
+
+</script>
+  </body>
+</html>

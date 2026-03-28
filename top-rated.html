@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+<title>
+ Top Rated-UQU BookHub
+</title>
+<link rel="icon" href="pic/icon.png"/>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+   <!-- Main navigation bar -->
+     <nav class="menu">
+      <img id="Logo" src="pic/bookpic.png" alt="Logo" />
+
+      <ul>
+        <li><a class="menu-item" href="browse.html">Explore Books</a></li>
+       <!--<li><a class="menu-item" href="add-review.html">Share a Review</a></li>-->
+        <li><a class="menu-item" href="top-rated.html">Top Picks</a></li>
+        <li><a class="menu-item" href="search.html">Smart Search </a></li>
+        <li><a class="menu-item" href="add-book.html">Add New Book</a></li>
+        <li><a class="menu-item" href="about.html">Who We Are?</a></li>
+        <li><a class="menu-item" href="contact.html">Contact Us</a></li>
+      </ul>
+    
+     </nav>
+
+      <div class="books-wrapper">
+
+    <div class="book-card">
+      <div class="book-rank">Top 1</div>
+      <img src="pic/book1.jpg" alt="Book Cover" class="book-cover">
+      <h2 class="book-title">System analysis & Design</h2>
+      <p class="book-description"> a guide to understand, analyzsis, and design information systems effectively.</p>
+      <div class="book-rating-value">rating: 4.9</div>
+      <div class="book-stars">★★★★☆</div>
+      <button class="book-action-button rate-button">add your review</button>
+    </div>
+
+    <div class="book-card">
+      <div class="book-rank">Top 2</div>
+      <img src="pic/book2.jpg" alt="Book Cover" class="book-cover">
+      <h2 class="book-title">operating system concepts</h2>
+      <p class="book-description">explains the principles and design of modern operating systems.</p>
+      <div class="book-rating-value">rating : 4.8</div>
+      <div class="book-stars">★★★★☆</div>
+      <button class="book-action-button rate-button">add your review</button>
+    </div>
+
+    <div class="book-card">
+      <div class="book-rank">Top 3</div>
+      <img src="pic/book3.jpg" alt="Book Cover" class="book-cover">
+      <h2 class="book-title">software engineering</h2>
+      <p class="book-description">guide to the principles, methods, and tools for developing software systems.</p>
+      <div class="book-rating-value">rating: 4.7</div>
+      <div class="book-stars">★★★★☆</div>
+      <button class="book-action-button rate-button">add your review</button>
+    </div>
+
+  </div>
+
+ 
+  
+     
+  <footer>
+    <p>© 2025 Umm Al-Qura University - All rights reserved.</p>
+  </footer>
+
+ <!-- JavaScript -->
+<script>
+
+  // Add a tooltip to the logo image
+ var logo = document.getElementById("Logo");
+  logo.title = "Home"; 
+
+// Redirect to homepage when logo is clicked
+function goToHomePage() {
+    window.location.href = "index.html";
+}
+
+logo.addEventListener("click", goToHomePage);
+
+//internal method
+var rateButtons = document.querySelectorAll(".rate-button");
+
+    rateButtons.forEach(function(button) {
+      button.addEventListener("click", function () {
+        location.href = "add-review.html"; 
+      });
+    });
+
+</script>
+  </body>
+</html>

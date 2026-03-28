@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+<title>
+ UQU BookHub
+</title>
+<link rel="icon" href="pic/icon.png"/>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+   <!-- Main navigation bar -->
+     <nav class="menu">
+      <img id="Logo" src="pic/bookpic.png" alt="Logo" />
+
+      <ul>
+        <li><a class="menu-item" href="browse.html">Explore Books</a></li>
+        <!--<li><a class="menu-item" href="add-review.html">Share a Review</a></li>-->
+        <li><a class="menu-item" href="top-rated.html">Top Picks</a></li>
+        <li><a class="menu-item" href="search.html">Smart Search </a></li>
+        <li><a class="menu-item" href="add-book.html">Add New Book</a></li>
+        <li><a class="menu-item" href="about.html">Who We Are?</a></li>
+        <li><a class="menu-item" href="contact.html">Contact Us</a></li>
+      </ul>
+    
+     </nav>
+
+ <!-- Main background image -->
+  <img id="library_img" src="pic/library.jpg" alte="Picture" >
+
+  
+ <div class="typing-container">
+  <h1 class="title"> UQU BookHub </h1>
+  <p id="typing-text"></p>
+</div>
+
+
+
+  <footer>
+    <p>© 2025 Umm Al-Qura University - All rights reserved.</p>
+  </footer>
+
+
+<script>
+// Typing effect logic
+
+const text = "Read It. Rate It. Share It.";
+const typingElement = document.getElementById("typing-text");
+let index = 0;
+let isDeleting = false;
+
+function typeText() {
+  if (!isDeleting) {
+    typingElement.textContent += text.charAt(index);
+    index++;
+    if (index === text.length) {
+      isDeleting = true;
+      setTimeout(typeText, 1000); 
+      return;
+    }
+  } else {
+    typingElement.textContent = text.substring(0, index - 1);
+    index--;
+    if (index === 0) {
+      isDeleting = false;
+    }
+  }
+   // Adjust typing speed
+  setTimeout(typeText, isDeleting ? 50 : 150);
+}
+
+typeText();
+
+  // Add a tooltip to the logo image
+ var logo = document.getElementById("Logo");
+  logo.title = "Home"; 
+
+// Redirect to homepage when logo is clicked
+function goToHomePage() {
+    window.location.href = "index.html";
+  
+}
+
+logo.addEventListener("click", goToHomePage);
+
+</script>
+  </body>
+</html>
+
+
+
+
+
+
+

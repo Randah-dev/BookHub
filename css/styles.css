@@ -1,0 +1,487 @@
+/*---------Main componant style------------*/
+
+*,body, html{
+  margin: 0;
+  padding:0;
+  font: 1.03em "Open Sans", sans-serif;
+}
+
+body{
+  background-color:antiquewhite;
+
+}
+
+.menu{
+  width: 100%;
+  background-color: #582200d8;
+  color: #daceb6;
+  height: 70px;
+ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+  border-radius: 5px; }
+.menu #Logo {
+  float: left;
+  height: 30px;
+  padding: 15px 30px;
+  font-size: 2.1em;
+  line-height: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  border-radius: 8px; 
+  cursor: pointer; 
+  transition: transform 0.3s ease;
+  margin-left: 20px;
+}
+.menu #Logo:hover {
+  transform: scale(1.3); 
+}
+
+.menu >ul{
+  margin: 0;
+  padding:0;
+  float: left;
+  list-style-type: none ;
+
+}
+.menu> ul >li{
+  float: left;
+}
+.menu-item{
+  display: inline-block;
+  padding: 15px 20px;
+  height: 40px;
+  line-height: 40px;
+  color: #daceb6;
+  text-decoration: none;
+  
+}
+
+.menu-item:hover {
+  background-color: #daceb6;
+  color: #582200d8; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+  transform: translateY(5px); 
+
+}
+
+footer {
+  background-color: #804f00;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  margin-top: 170px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  
+}
+/*-------------index page style-------------------*/
+#library_img{
+    width: 100% ;
+    height: 650px;
+    
+
+}
+
+.typing-container {
+  text-align: left;
+  margin-top: 500px;
+}
+
+#typing-text {
+   
+  font-family: 'Poppins', sans-serif;
+  position: absolute;   
+  top: 400px ;
+  left:150 ;
+  display: inline-block;
+  font-size: 60px;
+  color: #ffffff;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: #582200a0;
+  border-radius: 8px; 
+  box-shadow: 0 5px 12px rgba(255, 255, 255, 0.3);
+
+}
+.typing-container >.title{
+
+  font-family: 'Poppins', sans-serif;
+  position: absolute;   
+  top: 250px ;
+  left:500px ;
+  font-size: 80px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+  -webkit-text-stroke: 3px #3a1701;
+  box-shadow: 0 10px 14px rgba(255, 255, 255, 0.807);
+}
+
+
+/*------------------Shared Style (Search + Forms)----------------------------*/
+
+#search-contact {
+  padding: 30px;
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(152, 67, 18, 0.1);
+  border-radius: 10px;
+}
+.search{
+  
+  padding: 20px;
+  max-width: 500px; /* smaller width */
+  margin: 80px auto 0;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(152, 67, 18, 0.1);
+  border-radius: 10px;
+
+}
+
+form input[type="text"],
+form input[type="email"],
+form select,
+form textarea ,
+#resetButton{
+  width: 100%;
+  padding: 5px;
+  margin: auto;;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+form input[type="submit"] ,
+#resetButton{
+  background-color: 5;
+  cursor:pointer;
+}
+
+form input[type="submit"]:hover ,
+#resetButton:hover{
+  background-color: #492500;
+  color: #ffffff;
+}
+
+
+/* Unified Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  width: 100%;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group input[type="submit"] {
+  background-color: #804f00;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: fit-content;
+}
+
+.form-group input[type="submit"]:hover {
+  background-color: #582200;
+}
+
+.form-group small {
+  margin-top: 8px;
+  color: gray;
+  font-style: italic;
+}
+/*-----------------About page style------------------------*/
+#about-us {
+  padding: 3em;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 75%;
+  margin: 50px auto;
+}
+
+#about-us h2 {
+ font-family: 'Montserrat', sans-serif;
+  font-size: 2.5em;
+  color: #582200;
+  text-align: center;
+  margin-bottom: 1em;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#about-us h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8em;
+  color: #804f00;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: 500;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#about-us p {
+  font-size: 1.1em;
+  color: #333;
+  line-height: 1.6;
+  text-align: justaify;
+  margin-bottom: 1.5em;
+  font-family: 'Montserrat', sans-serif;
+}
+/*-------------------------------------------------------*/
+#filter {
+  padding: 12px 16px;
+  font-size: 1em;
+  border: 2px solid #804f00;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #582200;
+  box-shadow: 0 4px 10px rgba(152, 67, 18, 0.2);
+  transition: all 0.3s ease;
+  width: 250px;
+  margin: 20px auto;
+  display: block;
+}
+
+#filter:hover {
+  border-color: #582200;
+  box-shadow: 0 6px 14px rgba(152, 67, 18, 0.3);
+}
+
+#filter:focus {
+  outline: none;
+  border-color: #582200;
+  background-color: #fffaf2;
+}
+
+.books-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap:30px ;
+  padding: 60px 20px;
+}
+
+.book-card {
+  position: relative;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 260px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+}
+
+.book-cover {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.book-title {
+  font-size: 1.5em;
+  color: #582200;
+  margin: 15px 0 10px;
+}
+
+
+
+
+.book-description {
+  font-size: 0.95em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.book-rating-value,
+.book-stars {
+  font-weight: bold;
+  margin: 5px 0;
+  color: #804f00;
+}
+
+.book-action-button {
+  background-color: #582200d8;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.book-action-button:hover {
+  background-color: #804f00;
+}
+
+.book-rank {
+  position: absolute;
+  background-color: #804f00;
+  color: #fff;
+  padding: 6px 12px;
+  font-weight: bold;
+  border-radius: 0 0 10px 10px;
+  top: 0;
+  left: 0;
+  font-size: 0.95em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/*========================================*/
+
+#review-box {
+  max-width: 600px;
+  background-color: white;
+  margin: 50px;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(152, 67, 18, 0.1);
+  margin:auto;
+}
+
+h2 {
+  color: #582200;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  color: #333;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+}
+
+.stars {
+  display: flex;
+  margin-top: 5px;
+}
+
+.stars input {
+  display: none;
+}
+
+.stars label {
+  font-size: 25px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.stars input:checked ~ label,
+.stars label:hover,
+.stars label:hover ~ label {
+  color: gold;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  background-color: #804f00;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #582200;
+}
+
+
+/*------Add and Browse--------*/
+
+
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  width: 100%;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group input[type="submit"] {
+  background-color: #804f00;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: fit-content;
+}
+
+.form-group input[type="submit"]:hover {
+  background-color: #582200;
+}
+
+.form-group small {
+  margin-top: 8px;
+  color: gray;
+  font-style: italic;
+}
+/*----------------------------------*/

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script>
+  document.addEventListener("DOMContentLoaded", function () {
+  
+    // --- Contact Us Form ---
+    const contactForm = document.querySelector("form[action='#'][method='POST']");
+    if (contactForm) {
+      contactForm.addEventListener("submit", function (e) {
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+  
+        if (!name || !email || !message) {
+          alert("Please fill in all fields.");
+          e.preventDefault();
+          return;
+        }
+  
+        if (message.length < 10) {
+          alert("Your message should be at least 10 characters.");
+          e.preventDefault();
+          return;
+        }
+  
+        //  Show success alert
+        alert("Form was submitted successfully!");
+      });
+    }
+  
+    
+  
+  });
+  
+  </script>
+  <meta charset="UTF-8">
+  <title>Contact Us-UQU BookHub</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="pic/icon.png"/>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<link rel="stylesheet" href="css/styles.css">
+<body>
+  <header>
+    <nav class="menu">
+      <img id="Logo" src="pic/bookpic.png" alt="Logo" />
+      <ul>
+        
+        <li><a class="menu-item" href="browse.html">Explore Books</a></li>
+        <!--<li><a class="menu-item" href="add-review.html">Share a Review</a></li>-->
+        <li><a class="menu-item" href="top-rated.html">Top Picks</a></li>
+        <li><a class="menu-item" href="search.html">Smart Search </a></li>
+        <li><a class="menu-item" href="add-book.html">Add New Book</a></li>
+        <li><a class="menu-item" href="about.html">Who We Are?</a></li>
+        <li><a class="menu-item" href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="search-contact">
+   <form action="#" method="POST">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" placeholder="Real Name"required><br><br>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" placeholder="s4**8@uqu.sa"required><br><br>
+
+      <label for="message">Your Message:</label><br>
+      <textarea id="message" name="message" rows="3" cols="50" placeholder="Write here "required></textarea><br><br>
+
+      <input type="submit" value="Send Message">
+  </main>
+<script>
+ var logo = document.getElementById("Logo");
+  logo.title = "Home"; 
+
+function goToHomePage() {
+  setTimeout(function () {
+    window.location.href = "index.html";
+  }, 800);
+}
+
+logo.addEventListener("click", goToHomePage);
+
+</script>
+  <footer>
+    <p>&copy; 2025 UQU Book Review Platform | Email: support@uqubooks.com</p>
+  </footer>
+</body>
+</html>
